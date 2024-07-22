@@ -33,9 +33,9 @@ export default function StarRating({
   const [rating, setRating] = useState(defaultRating);
   const [temptRating, setTemptRating] = useState(0);
 
-  function handleRating(rate) {
-    setRating(rate);
-    onSetRating(rate);
+  function handleRating(rating) {
+    setRating(rating);
+    // onSetRating(rating);
   }
 
   const textStyle = {
