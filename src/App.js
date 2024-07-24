@@ -114,7 +114,6 @@ export default function App() {
           if (data.Response === "False") throw new Error("Movie not found");
           setMovies(data.Search);
         } catch (error) {
-          console.log(error.message);
           setError(error.message);
         } finally {
           setIsLoading(false);
@@ -324,6 +323,14 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     [selectedId]
   );
 
+  useEffect(
+    function () {
+      if (!title) return;
+      document.title = `Movie | ${title}`;
+    },
+    [title]
+  );
+
   return (
     <div className="details">
       {isLoading ? (
@@ -425,7 +432,7 @@ function WatchedSummary({ watched }) {
         </p>
         <p>
           <span>🌟</span>
-          <span>{avgUserRating.toFixed(2 )}</span>
+          <span>{avgUserRating.toFixed(2)}</span>
         </p>
         <p>
           <span>⏳</span>
