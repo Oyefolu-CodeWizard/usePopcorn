@@ -61,7 +61,7 @@ body {
 }
 
 .box::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 5px; /* Width of the scrollbar */
 }
 
 .box::-webkit-scrollbar-track {
