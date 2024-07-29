@@ -35,7 +35,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  height: 7.2rem;
+  height: 6.2rem;
   padding: 0 3.2rem;
   background-color: var(--color-primary);
   border-radius: 0.9rem;
@@ -50,12 +50,26 @@ body {
 }
 
 .box {
-  width: 42rem;
+  width: 40rem;
   max-width: 42rem;
   background-color: var(--color-background-500);
   border-radius: 0.9rem;
-  overflow: scroll;
+  overflow-y: scroll;
   position: relative;
+}
+
+.box::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.box::-webkit-scrollbar-track {
+    background: transparent; /* Track color */
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 10px; /* Round corners of the thumb */
+    /* border: 2px solid #eee; Padding around thumb */
 }
 
 .loader {
